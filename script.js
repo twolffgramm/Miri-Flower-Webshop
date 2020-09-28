@@ -13,6 +13,14 @@ const moveinright = "bandright-movedin";
 const removearrow = "downarrow-scrolled";
 
 
+if( document.refreshForm.visited.value == "" )
+	{
+		document.refreshForm.visited.value = "1";
+	}
+	else
+	{
+    window.scrollTo(0, 0);
+	}
 
 window.addEventListener("scroll", () => {
 
