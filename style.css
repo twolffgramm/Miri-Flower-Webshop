@@ -216,7 +216,7 @@ nav ul a:hover {
 
 .about-image img{
     width: 100%;
-    height: 100%;
+    height: auto;
     max-width: 45rem;
     max-height: 45rem;
 }
@@ -291,4 +291,41 @@ nav ul a:hover {
 
 @keyframes jump {
     0% { bottom: 5vh; } 50% { bottom: 8vh; } 100% { bottom: 5vh; }
+  }
+
+  @media screen and (max-width: 1000px){
+      .bandleft-movedin {
+          transform: scale(0.8) translateX(-85%) translateY(-15%);
+          transition: 1s ease;
+      }
+        
+      .bandright-movedin {
+          transform: scale(0.75) translateX(-20%) translateY(3%) rotateY(180deg) rotateX(180deg);
+          transition: 1s ease;
+      }
+        
+      .about-section {
+          height: 90vh;
+          flex-direction: column;
+      }
+
+      .about {
+          width: 50%;
+          flex: 1;
+          padding: 0;
+          margin-top: 5rem;
+      }
+
+      .about-image {
+          flex: 2;
+      }
+
+      .about-image img{
+          height: auto;
+          width: 100%;
+      }
+
+      .howto-container {
+          height: 90vh;
+      }
   }
