@@ -264,7 +264,7 @@ nav a:hover {
     flex-direction: column;
     text-align: center;
     object-fit: contain;
-    max-width: 35rem;
+    max-width: 33%;
     box-shadow: 4px 4px 5px rgb(180, 177, 177);;
 }
 
@@ -308,6 +308,9 @@ nav a:hover {
   }
 
   @media screen and (max-width: 1000px){
+      #logocenter {
+          transform: scale(0.75);
+      }
       .bandleft-movedin {
           transform: translateX(-80%) translateY(-5%);
           transition: 1s ease;
@@ -318,10 +321,10 @@ nav a:hover {
           transition: 1s ease;
       }
       .about-container {
-          height: 80vh;
+          height: 100vh;
       }
       .about-section {
-          height: 80vh;
+          height: 100vh;
           flex-direction: column;
       }
 
@@ -347,6 +350,26 @@ nav a:hover {
       }
 
       .howto-container {
-          height: 90vh;
+          height: 180vh;
+      }
+      .howto-section {
+          height: 180vh
+      }
+      .h1-wrapper {
+          margin-top: 10rem;
+      }
+      .cards {
+          height: 90%;
+          margin: 0;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: center;
+      }
+      .card {
+          max-width: 75%;
+          margin: 3rem 0rem;
+      }
+      .card p {
+          z-index: 100;
       }
   }
