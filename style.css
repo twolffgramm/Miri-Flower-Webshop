@@ -121,26 +121,30 @@ nav ul a:hover {
 }
 
 .bandleft {
-    transform: translateX(-100%) translateY(3%);
+    transform: translateX(-100%) translateY(0%);
     position: fixed;
     top: 12vh;
     left: 0%;
+    height: 100vh;
+    width: auto;
 }
 
 .bandleft-movedin {
-    transform: scale(1.2) translateX(-60%) translateY(3%);
+    transform: translateX(-70%) translateY(-5%);
     transition: 1s ease;
 }
 
 .bandright {
-    transform: scale(1) translateX(20%) translateY(3%) rotateY(180deg) rotateX(180deg);
+    transform: translateX(20%) translateY(0%) rotateY(180deg) rotateX(180deg);
     position: fixed;
     top: 12vh;
     left: 100%;
+    height: 90vh;
+    width: auto;
 }
 
 .bandright-movedin {
-    transform: scale(1.2) translateX(-20%) translateY(3%) rotateY(180deg) rotateX(180deg);
+    transform: translateX(-30%) translateY(-5%) rotateY(180deg) rotateX(180deg);
     transition: 1s ease;
 }
 
@@ -178,7 +182,7 @@ nav ul a:hover {
 }
 
 .about-container {
-    height: 70vh;
+    height: 65vh;
 }
 
 .about-section{
@@ -192,12 +196,14 @@ nav ul a:hover {
 
 .about {
     padding: 5rem;
+    width: 100%;
     text-align: center;
     flex: 1;
 }
 
 .about h1 {
     margin-bottom: 5rem;
+    font-size: 5rem;
 }
 
 .about p {
@@ -206,6 +212,7 @@ nav ul a:hover {
 
 .about-image {
     width: 50%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -215,14 +222,12 @@ nav ul a:hover {
 }
 
 .about-image img{
-    width: 100%;
-    height: auto;
-    max-width: 45rem;
-    max-height: 45rem;
+    max-width: 80%;
+    max-height: 80%;
 }
 
 .howto-container {
-    height: 45vh;
+    height: 65vh;
 }
 
 .howto {
@@ -233,6 +238,10 @@ nav ul a:hover {
     flex-direction: column;
     text-align: center;
     justify-content: center;
+}
+
+.howto h1 {
+    font-size: 5rem;
 }
 
 .cards {
@@ -295,34 +304,41 @@ nav ul a:hover {
 
   @media screen and (max-width: 1000px){
       .bandleft-movedin {
-          transform: scale(0.8) translateX(-85%) translateY(-15%);
+          transform: translateX(-80%) translateY(-5%);
           transition: 1s ease;
       }
         
       .bandright-movedin {
-          transform: scale(0.75) translateX(-20%) translateY(3%) rotateY(180deg) rotateX(180deg);
+          transform: translateX(-20%) translateY(-5%) rotateY(180deg) rotateX(180deg);
           transition: 1s ease;
       }
-        
+      .about-container {
+          height: 80vh;
+      }
       .about-section {
-          height: 90vh;
+          height: 80vh;
           flex-direction: column;
       }
 
       .about {
-          width: 50%;
-          flex: 1;
+          height: 50%;
+          width: 90%;
           padding: 0;
-          margin-top: 5rem;
+          margin: 5rem 0 2rem 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
       }
 
       .about-image {
-          flex: 2;
+          height: 50%;
+          width: 90%;
       }
 
       .about-image img{
-          height: auto;
-          width: 100%;
+          max-width: 100%;
+          max-height: 100%;
       }
 
       .howto-container {
