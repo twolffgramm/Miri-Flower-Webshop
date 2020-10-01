@@ -83,6 +83,11 @@ nav ul a:hover {
     cursor: pointer;
 }
 
+nav a:hover {
+    color: rgb(247, 147, 162);
+    cursor: pointer;
+}
+
 .home {
     height: 180vh;
 }
