@@ -5,6 +5,8 @@ var bandleft = document.getElementById("bandleft");
 var bandright = document.getElementById("bandright");
 var bandupper = document.getElementById("bandupper");
 var downarrow = document.getElementById("downarrow");
+var mobilenav = document.getElementById("mobile-nav");
+var hamburger = document.getElementById("hamburger");
 
 const scrolled = "nav-container-scrolled";
 const homescrolled = "home-scrolled";
@@ -13,6 +15,7 @@ const moveinleft = "bandleft-movedin";
 const moveinright = "bandright-movedin";
 const moveinupper = "bandupper-movedin";
 const removearrow = "downarrow-scrolled";
+const mobilenavactive = "mobile-nav-active";
 
 
 window.addEventListener("scroll", () => {
@@ -41,3 +44,10 @@ downarrow.addEventListener("click", () => {
   window.scrollTo(0, 700);
   downarrow.remove();
 })
+
+hamburger.addEventListener("click", () => {
+  mobilenav.classList.toggle(mobilenavactive);
+  hamburger.classList.toggle("hamburger-toggle");
+})
+
+
