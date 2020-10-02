@@ -3,6 +3,7 @@ var navbar = document.getElementById("navbar");
 var homesection = document.getElementById("home-section");
 var bandleft = document.getElementById("bandleft");
 var bandright = document.getElementById("bandright");
+var bandupper = document.getElementById("bandupper");
 var downarrow = document.getElementById("downarrow");
 
 const scrolled = "nav-container-scrolled";
@@ -10,6 +11,7 @@ const homescrolled = "home-scrolled";
 const home = "home";
 const moveinleft = "bandleft-movedin";
 const moveinright = "bandright-movedin";
+const moveinupper = "bandupper-movedin";
 const removearrow = "downarrow-scrolled";
 
 
@@ -20,6 +22,7 @@ window.addEventListener("scroll", () => {
   if (currentScroll >= 300 && !bandleft.classList.contains(moveinleft)){
     bandleft.classList.add(moveinleft);
     bandright.classList.add(moveinright);
+    bandupper.classList.add(moveinupper);
   }
   if (currentScroll >= 500 && !navbar.classList.contains(scrolled)){
     navbar.classList.add(scrolled);

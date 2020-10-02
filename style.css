@@ -39,6 +39,7 @@ a {
     top: 0;
     transform: translateY(-100%);
     z-index: 1;
+    box-shadow: 4px 4px 5px #f7f7e2;
 }
 
 .nav-container-scrolled {
@@ -140,7 +141,7 @@ nav a:hover {
 }
 
 .bandright {
-    transform: translateX(20%) translateY(0%) rotateY(180deg) rotateX(180deg);
+    transform: translateX(20%) translateY(0%) rotateZ(180deg);
     position: fixed;
     top: 12vh;
     left: 100%;
@@ -160,6 +161,11 @@ nav a:hover {
     width: 100vw;
     height: auto;
     transform: translateX(-50%) translateY(-100%)
+}
+
+.bandupper-movedin {
+    transform: translateX(-50%) translateY(-100%);
+    transition: 1s ease;
 }
 
 .logo-center {
@@ -321,73 +327,74 @@ nav a:hover {
     0% { bottom: 5vh; } 50% { bottom: 8vh; } 100% { bottom: 5vh; }
   }
 
-  @media screen and (max-width: 1000px){
-      #logocenter {
-          transform: scale(0.75);
-      }
-      .bandleft-movedin {
-          transform: translateX(-100%) translateY(-5%);
-          transition: 1s ease;
-      }
-        
-      .bandright-movedin {
-          transform: translateX(100%) translateY(-5%) rotateY(180deg) rotateX(180deg);
-          transition: 1s ease;
-      }
+@media screen and (max-width: 1000px){
+    #logocenter {
+        transform: scale(0.75);
+    }
+    .bandleft-movedin {
+        transform: translateX(-100%) translateY(-5%);
+        transition: 1s ease;
+    }
+    
+    .bandright-movedin {
+        transform: translateX(100%) translateY(-5%) rotateZ(180deg);
+        transition: 1s ease;
+    }
 
-      .bandupper {
-          transform: translateX(-50%) translateY(0);
-      }
-      nav {
-          height: 5vh;
-      }
-      .about-container {
-          height: 90vh;
-      }
-      .about-section {
-          height: 90vh;
-          flex-direction: column;
-      }
+    .bandupper-movedin {
+        transform: translateX(-50%) translateY(0%);
+        transition: 1s ease;
+    }
+    nav {
+        height: 5vh;
+    }
+    .about-container {
+        height: 90vh;
+    }
+    .about-section {
+        height: 90vh;
+        flex-direction: column;
+    }
 
-      .about {
-          height: 50%;
-          width: 90%;
-          padding: 0;
-          margin: 5rem 0 2rem 0;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-      }
+    .about {
+        height: 50%;
+        width: 90%;
+        padding: 0;
+        margin: 5rem 0 2rem 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
 
-      .about-image {
-          height: 50%;
-          width: 90%;
-      }
+    .about-image {
+        height: 50%;
+        width: 90%;
+    }
 
-      .about-image img{
-          max-width: 100%;
-          max-height: 100%;
-      }
+    .about-image img{
+        max-width: 100%;
+        max-height: 100%;
+    }
 
-      .howto-container {
-          height: 180vh;
-      }
-      .howto-section {
-          height: 180vh
-      }
-      .h1-wrapper {
-          margin-top: 5rem;
-      }
-      .cards {
-          height: 90%;
-          margin: 0;
-          flex-direction: column;
-          justify-content: space-around;
-          align-items: center;
-      }
-      .card {
-          max-width: 90%;
-          margin: 0.5rem 0rem;
-      }
+    .howto-container {
+        height: 180vh;
+    }
+    .howto-section {
+        height: 180vh
+    }
+    .h1-wrapper {
+        margin-top: 5rem;
+    }
+    .cards {
+        height: 90%;
+        margin: 0;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .card {
+        max-width: 90%;
+        margin: 0.5rem 0rem;
+    }
   }
