@@ -149,14 +149,24 @@ nav a:hover {
 }
 
 .bandright-movedin {
-    transform: translateX(-30%) translateY(-5%) rotateY(180deg) rotateX(180deg);
+    transform: translateX(-30%) translateY(-5%) rotateZ(180deg);
     transition: 1s ease;
+}
+
+.bandupper {
+    position: fixed;
+    top: -3vh;
+    left: 50%;
+    width: 100vw;
+    height: auto;
+    transform: translateX(-50%) translateY(-100%)
 }
 
 .logo-center {
     text-align: center;
     position: sticky;
     top: 45%;
+    z-index: -1;
 }
 
 #mainlogo {
@@ -188,6 +198,7 @@ nav a:hover {
 
 .about-container {
     height: 65vh;
+    margin-top: 3rem;
 }
 
 .about-section{
@@ -197,6 +208,9 @@ nav a:hover {
     display: flex;
     align-items: center;
     justify-content: space-around;
+    background: #fdfdee;
+    border-radius: 3%;
+    box-shadow: 4px 4px 5px #f7f7e2;
 }
 
 .about {
@@ -265,7 +279,7 @@ nav a:hover {
     text-align: center;
     object-fit: contain;
     max-width: 33%;
-    box-shadow: 4px 4px 5px rgb(180, 177, 177);;
+    box-shadow: 4px 4px 5px rgb(180, 177, 177);
 }
 
 .card p {
@@ -312,19 +326,26 @@ nav a:hover {
           transform: scale(0.75);
       }
       .bandleft-movedin {
-          transform: translateX(-80%) translateY(-5%);
+          transform: translateX(-100%) translateY(-5%);
           transition: 1s ease;
       }
         
       .bandright-movedin {
-          transform: translateX(-20%) translateY(-5%) rotateY(180deg) rotateX(180deg);
+          transform: translateX(100%) translateY(-5%) rotateY(180deg) rotateX(180deg);
           transition: 1s ease;
       }
+
+      .bandupper {
+          transform: translateX(-50%) translateY(0);
+      }
+      nav {
+          height: 5vh;
+      }
       .about-container {
-          height: 100vh;
+          height: 90vh;
       }
       .about-section {
-          height: 100vh;
+          height: 90vh;
           flex-direction: column;
       }
 
@@ -356,7 +377,7 @@ nav a:hover {
           height: 180vh
       }
       .h1-wrapper {
-          margin-top: 10rem;
+          margin-top: 5rem;
       }
       .cards {
           height: 90%;
@@ -366,10 +387,7 @@ nav a:hover {
           align-items: center;
       }
       .card {
-          max-width: 75%;
-          margin: 3rem 0rem;
-      }
-      .card p {
-          z-index: 100;
+          max-width: 90%;
+          margin: 0.5rem 0rem;
       }
   }
