@@ -183,7 +183,6 @@ nav a:hover {
     left: 50%;
     width: 100vw;
     height: auto;
-    transform: translateX(-50%) translateY(-100%)
 }
 
 .bandupper-movedin {
@@ -365,7 +364,7 @@ nav a:hover {
     }
 
     .bandupper-movedin {
-        top: -75%;
+        top: -9vh;
         transform: translateX(-50%) translateY(0%);
         transition: 1s ease;
     }
@@ -428,7 +427,7 @@ nav a:hover {
         overflow-x: hidden;
     }
     .bandupper-movedin {
-        top: -30%;
+        top: -5vh;
         transform: translateX(-50%) translateY(0%);
         transition: 1s ease;
 
