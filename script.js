@@ -108,7 +108,7 @@ window.onload = function() {
   }
 };
 
-// Display textinput-value in textbox
+// Display textinput-value in textboxx
 var textinput = document.getElementById("textinput");
 
 textinput.addEventListener("input", function() {

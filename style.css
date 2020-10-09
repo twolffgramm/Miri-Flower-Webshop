@@ -443,7 +443,7 @@ nav a:hover {
     transform: translateX(0%);
 }
 
-.emailinput {
+.emailinput{
     width: 50%;
     position: relative;
     height: 5rem;
