@@ -103,7 +103,15 @@ window.onload = function() {
       var period = elements[i].getAttribute('data-period');
       var font = elements[i].getAttribute('font-type');
       if (toRotate) {
-        new TxtType(elements[i], JSON.parse(toRotate), period,JSON.parse(font));
+        new TxtType(elements[i], JSON.parse(toRotate), period, JSON.parse(font));
       }
   }
 };
+
+// Display textinput-value in textbox
+var textinput = document.getElementById("textinput");
+
+textinput.addEventListener("input", function() {
+  var textinputvalue = textinput.value;
+  document.getElementById("textinputvalue").textContent = textinputvalue;
+});
