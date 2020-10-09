@@ -1,11 +1,11 @@
 // get Elements
-var navbar = document.getElementById("navbar");
+var navcontainer = document.getElementById("nav-container");
 var homesection = document.getElementById("home-section");
 var bandleft = document.getElementById("bandleft");
 var bandright = document.getElementById("bandright");
 var bandupper = document.getElementById("bandupper");
 var downarrow = document.getElementById("downarrow");
-var mobilenav = document.getElementById("mobile-nav");
+var responsivenav = document.getElementById("responsive-nav");
 var hamburger = document.getElementById("hamburger");
 
 // Animations on specific scroll position
@@ -16,8 +16,8 @@ window.addEventListener("scroll", () => {
     bandright.classList.add("bandright-movedin");
     bandupper.classList.add("bandupper-movedin");
   }
-  if (currentScroll >= 500 && !navbar.classList.contains("nav-container-scrolled")){
-    navbar.classList.add("nav-container-scrolled");
+  if (currentScroll >= 500 && !navcontainer.classList.contains("nav-container-scrolled")){
+    navcontainer.classList.add("nav-container-scrolled");
     downarrow.classList.add("downarrow-scrolled");
   }
   if (currentScroll >= 700 && !homesection.classList.contains("home-scrolled")){
@@ -34,7 +34,7 @@ downarrow.addEventListener("click", () => {
 
 // mobile menu
 hamburger.addEventListener("click", () => {
-  mobilenav.classList.toggle("mobile-nav-active");
+  responsivenav.classList.toggle("responsive-nav-active");
   hamburger.classList.toggle("hamburger-toggle");
 })
 
@@ -47,7 +47,7 @@ document.body.addEventListener("click",function(e) {
   !e.target.classList.contains("line3") && 
   !e.target.classList.contains("hamburger") && 
   hamburger.classList.contains("hamburger-toggle")){
-    mobilenav.classList.remove("mobile-nav-active");
+    responsivenav.classList.remove("responsive-nav-active");
     hamburger.classList.remove("hamburger-toggle");
   }
 });
@@ -75,7 +75,7 @@ TxtType.prototype.tick = function() {
   this.txt = fullTxt.substring(0, this.txt.length + 1);
   }
 
-  this.el.innerHTML = '<span class="wrap" style="font-family:'+font+'">'+this.txt+'</span>';
+  this.el.innerHTML = '<span class="typewrite-wrap" style="font-family:'+font+'">'+this.txt+'</span>';
 
   var that = this;
   var delta = 250 - Math.random() * 100;

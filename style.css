@@ -3,7 +3,7 @@ html {
     background: white;
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -34,13 +34,13 @@ a {
 }
 
 .nav-container {
-    background: #fdfdee;
     position: sticky;
     top: 0;
+    height: 8vh;
+    min-height: 5rem;
+    background: #fdfdee;
     transform: translateY(-100%);
     z-index: 1;
-    box-shadow: 4px 4px 5px #f7f7e2;
-    height: 10vh;
 }
 
 .nav-container img {
@@ -49,6 +49,7 @@ a {
 
 .navbar {
     background: #fdfdee;
+    box-shadow: 4px 4px 3px #f7f7e2;
     z-index: 1;
 }
 
@@ -58,18 +59,17 @@ a {
 
 nav {
     width: 80%;
-    height: 10vh;
+    height: 8vh;
+    min-height: 5rem;
     margin: auto;
-    padding: 1rem 0rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 .hamburger {
     display: none;
     cursor: pointer;
 }
-.hamburger div{
+.hamburger div {
     width: 20px;
     height: 3px;
     background-color: rgb(0, 0, 0);
@@ -81,7 +81,7 @@ nav {
     flex: 1;
 }
 
-.mobile-nav {
+.responsive-nav {
     flex: 1;
 }
 
@@ -98,14 +98,8 @@ nav ul li {
     padding: 1rem 1rem;
 }
 
-.order a{
+.order a {
     font-weight: bold;
-}
-
-
-nav ul a:hover {
-    color: rgb(247, 147, 162);
-    cursor: pointer;
 }
 
 nav a:hover {
@@ -136,12 +130,12 @@ nav a:hover {
     z-index: 1;
 }
 
-.downarrow img{
+.downarrow img {
     height: 3vh;
     width: auto;
 }
 
-.downarrow:hover{
+.downarrow:hover {
     opacity: 0.35;
     cursor: pointer;
 }
@@ -181,6 +175,7 @@ nav a:hover {
 .bandupper {
     position: absolute;
     left: 50%;
+    transform: translateX(-50%) translateY(-100%);
     width: 100vw;
     height: auto;
 }
@@ -225,8 +220,7 @@ nav a:hover {
 }
 
 .about-container {
-    height: 65vh;
-    margin-top: 3rem;
+    padding-top: 10rem;
 }
 
 .about-section{
@@ -264,8 +258,6 @@ nav a:hover {
     justify-content: center;
     align-items: center;
     flex: 1;
-    border-radius: 3%;
-    overflow: hidden;
 }
 
 .about-image img{
@@ -274,7 +266,7 @@ nav a:hover {
 }
 
 .howto-container {
-    height: 65vh;
+    padding-top: 10rem;
 }
 
 .howto {
@@ -298,29 +290,30 @@ nav a:hover {
 }
 
 .card {
-    margin: 0 2rem;
     background: #fdfdee;
     border-radius: 5%;
     overflow: hidden;
+    margin: 0rem 1rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     object-fit: contain;
-    max-width: 33%;
+    width: 33%;
     box-shadow: 4px 4px 5px rgb(180, 177, 177);
 }
 
 .typewrite {
-    width: 33rem;
-    height: 35rem;
+    width: 100%;
+    height: 90%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.wrap {
+.typewrite-wrap {
     font-size: 8rem;
-    border-right: 0.08em solid #000
+    border-right: 0.35rem solid rgb(0,0,0);
+    animation: blinkTextCursor 1s steps(1) infinite normal;
 }
 
 .card p {
@@ -331,36 +324,50 @@ nav a:hover {
 
 .card img {
     max-width: 100%;
-    max-height: 90%;
+    max-height: 100%;
 }
 
-@keyframes nav-anim{
-    from{
+@keyframes nav-anim {
+    from {
         transform: translateY(-100%);
     }
-    to{
+    to {
         transform: translateY(0%);
     }
 }
 
-@keyframes line-anim{
+@keyframes line-anim {
     to {
         stroke-dashoffset: 0;
     }
 }
 
-@keyframes fill{
-    from{
+@keyframes fill {
+    from {
         fill: transparent;
     }
-    to{
+    to {
         fill: black;
     }
 }
 
 @keyframes jump {
-    0% { bottom: 5vh; } 50% { bottom: 8vh; } 100% { bottom: 5vh; }
+    0% { 
+        bottom: 5vh; 
+    } 
+    50% { 
+        bottom: 8vh; 
+    } 
+    100% { 
+        bottom: 5vh; 
+    }
   }
+
+@keyframes blinkTextCursor {
+    50% {
+        border-color: transparent;
+    }
+}
 
 @media screen and (max-width: 1000px){
     #logocenter {
@@ -377,18 +384,11 @@ nav a:hover {
     }
 
     .bandupper-movedin {
-        top: -9vh;
+        bottom: -90%;
         transform: translateX(-50%) translateY(0%);
-        transition: 1s ease;
     }
-    nav {
-        height: 8vh;
-    }
-    .about-container {
-        height: 90vh;
-    }
+
     .about-section {
-        height: 90vh;
         flex-direction: column;
     }
 
@@ -408,53 +408,29 @@ nav a:hover {
         width: 90%;
     }
 
-    .about-image img{
-        max-width: 100%;
-        max-height: 100%;
-    }
-
-    .howto-container {
-        height: 180vh;
-    }
-    .howto-section {
-        height: 180vh
-    }
-    .h1-wrapper {
-        margin-top: 5rem;
-    }
     .cards {
-        height: 90%;
-        margin: 0;
         flex-direction: column;
         justify-content: space-around;
         align-items: center;
     }
     .card {
-        max-width: 47.5rem;
-        margin: 0.5rem 0rem;
-    }
-    .typewrite {
-        width: 80vw;
-        height: 25vh;
+        width: 100%;
+        margin: 1rem 0rem;
     }
 }
 
 @media screen and (max-width: 767px){
-    body {
-        overflow-x: hidden;
-    }
+
     .bandupper-movedin {
-        top: -5vh;
+        bottom: -65%;
         transform: translateX(-50%) translateY(0%);
         transition: 1s ease;
+    }
 
-    }
-    .nav-container {
-        height: 8vh;
-    }
     #logo {
         transform: translateX(1rem);
     }
+
     .hamburger{
         display: block;
     }
@@ -462,9 +438,11 @@ nav a:hover {
     .hamburger-toggle .line1 {
         transform: rotate(-45deg) translate(-5px,6px);
     }
+
     .hamburger-toggle .line2 {
         opacity: 0;
     }
+
     .hamburger-toggle .line3 {
         transform: rotate(45deg) translate(-5px,-6px);
     }
@@ -473,7 +451,7 @@ nav a:hover {
         text-align: center;
     }
 
-    .mobile-nav{
+    .responsive-nav{
         position: absolute;
         right: 0;
         height: 46vh;
@@ -483,27 +461,23 @@ nav a:hover {
         transform: translateY(-100%);
         opacity: 0;
         z-index: -1;
-        box-shadow: -4px 4px 5px #f7f7e2;
+        box-shadow: -4px 4px 3px #f7f7e2;
         transition: 0.2s ease;
     }
 
-    .mobile-nav-active {
+    .responsive-nav-active {
         transform: translateY(0%);
         opacity: 1;
     }
 
-    .mobile-nav ul{
+    nav ul{
         height: 100%;
-        display: flex;
         flex-direction: column;
         justify-content: space-around;
     }
-    .mobile-nav ul li{
+
+    nav ul li{
         height: auto;
         padding: 2rem 2rem;
-    }
-
-    .card {
-        max-width: 47.5rem;
     }
 }
